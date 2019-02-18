@@ -27,4 +27,5 @@ How to use it
 3. Require the file ('require "./lib/raindrops.rb"')
 4. Create an instance of the class ('Raindrops.new')
 5. Use the method "print_result" with your desired input number
+
 ![Screenshot](Captura de pantalla 2019-02-18 a las 17.18.07.png)
