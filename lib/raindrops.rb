@@ -7,10 +7,11 @@ class Raindrops
   }
 
   def print_result(input_number)
-    print 'Pling' if divisible_by?(input_number, 3)
-    print 'Plang' if divisible_by?(input_number, 5)
-    print 'Plong' if divisible_by?(input_number, 7)
-    print input_number if not_divisible_by_rules?(input_number)
+    if not_divisible_by_rules? (input_number)
+      print input_number
+    else
+      output_string(input_number)
+    end
   end
 
   private
@@ -20,8 +21,12 @@ class Raindrops
   end
 
   def not_divisible_by_rules?(input_number)
-    divisors = []
-    RULES.each_key { |rules_number| divisors << input_number if divisible_by?(input_number, rules_number) }
-    divisors.empty?
+    valid_divisors = []
+    RULES.each_key { |rules_number| valid_divisors << input_number if divisible_by?(input_number, rules_number) }
+    valid_divisors.empty?
+  end
+
+  def output_string(input_number)
+    RULES.each { |rules_number, string| print string if divisible_by?(input_number, rules_number) }
   end
 end
