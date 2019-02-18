@@ -5,6 +5,7 @@
 class Raindrops
   def print_result(input_number)
     print 'Pling' if (input_number % 3).zero?
-    print input_number unless (input_number % 3).zero?
+    print 'Plang' if (input_number % 5).zero?
+    print input_number unless (input_number % 3).zero? || (input_number % 5).zero?
   end
 end
