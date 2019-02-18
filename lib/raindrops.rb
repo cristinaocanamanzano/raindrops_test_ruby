@@ -1,13 +1,12 @@
 class Raindrops
-
   RULES = {
-    3 => "Pling",
-    5 => "Plang",
-    7 => "Plong"
-  }
+    3 => 'Pling',
+    5 => 'Plang',
+    7 => 'Plong'
+  }.freeze
 
   def print_result(input_number)
-    if not_divisible_by_rules? (input_number)
+    if not_divisible_by_rules? input_number
       print input_number
     else
       output_string(input_number)

@@ -35,12 +35,12 @@ describe Raindrops do
 
       it 'outputs "Plang" when the input number is divisible by 5' do
         expect { raindrops.print_result(10) }.to output('Plang').to_stdout
-                expect { raindrops.print_result(-10) }.to output('Plang').to_stdout
+        expect { raindrops.print_result(-10) }.to output('Plang').to_stdout
       end
 
       it 'outputs "Plong" when the input number is divisible by 7' do
         expect { raindrops.print_result(14) }.to output('Plong').to_stdout
-                expect { raindrops.print_result(-14) }.to output('Plong').to_stdout
+        expect { raindrops.print_result(-14) }.to output('Plong').to_stdout
       end
     end
 
