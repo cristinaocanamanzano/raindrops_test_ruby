@@ -6,8 +6,8 @@ class Raindrops
   }
 
   def print_result(input_number)
-    if not_divisible_by_rules? input_number
-      print input_number
+    if not_divisible_by_rules?(input_number)
+      print input_number.to_s
     else
       output_string(input_number)
     end
