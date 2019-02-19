@@ -10,6 +10,13 @@ This is a program where the user can input a number and, depending on the number
 - If the number is divisible by 7, the output will be 'Plong'
 - If the number is not divisible by any of the numbers mentioned above, the output will be the same number
 
+Technologies used
+-------
+- Ruby
+- RSpec for testing
+- Simplecov for test coverage
+- Rubocop as a linter
+
 Setup
 -------
 1. Download this repository and navigate to it in the command line
