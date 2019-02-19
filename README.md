@@ -36,3 +36,21 @@ How to use it
 5. Use the method "print_result" with your desired input number
 
 ![Screenshot](images/irb.png)
+
+Approach to solve this tech test
+------
+
+Before reaching the final solution, the code implemented at the beginning was the following:
+![Screenshot](images/firstsolution.png)
+
+This solution was short and readable and it would be ok if we were sure that this program would never be changed. However, it does not make it easy to change or extend the program later in the future. For example, if we were asked to add 10 new rules, we would need to add 10 more lines with if-statements and ten more options to the unless-statement.
+
+Bearing this in mind, the *final solution* contains the following:
+
+-A constant 'RULES' containing a hash with the rules that need to be followed by the program (for example: multiples of 3 should output 'Pling').
+
+-A 'print_result' method. This method is in charge of printing a specific output to the screen (words or digits) depending on the input given.
+
+-Some private functions which contain the logic called by the 'prrint_result' method (check if a number is divisible by another, check if a number is not divisible by any of the numbers in the rules hash, output a specific string based on the rules hash)
+
+With this new solution, if we had to add 10, 50 or 100 new rules, we would just need to add them to the RULES constant instead of adding a whole bunch of if- and unless- statements.
